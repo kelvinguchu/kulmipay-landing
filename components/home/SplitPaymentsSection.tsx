@@ -86,10 +86,9 @@ export function SplitPaymentsSection() {
           {/* Right — Text + CTA */}
           <div>
             <p className='text-muted-foreground text-base md:text-lg mb-6 md:mb-8 leading-relaxed'>
-              White-label payment infrastructure for CBK-licensed financial
-              institutions. Manage customer sub-accounts, process split
-              payments, and handle multi-currency operations — all through one
-              API.
+              Payment infrastructure for businesses and platforms. Manage
+              customer sub-accounts, process split payments, and handle
+              multi-currency operations — all through one API.
             </p>
 
             <div className='space-y-3 md:space-y-4 mb-8 md:mb-10'>
@@ -98,7 +97,7 @@ export function SplitPaymentsSection() {
                 "Multi-currency balances (KES, USD, EUR, GBP)",
                 "Real-time fund movement between accounts",
                 "Enterprise APIs for full automation",
-                "CBK-compliant reporting built in",
+                "Compliant reporting built in",
               ].map((item) => (
                 <div key={item} className='flex items-start gap-3'>
                   <div className='shrink-0 w-1.5 h-1.5 rounded-full bg-brand mt-2' />

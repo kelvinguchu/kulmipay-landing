@@ -9,7 +9,6 @@ import {
   HiOutlineEye,
   HiOutlineCpuChip,
   HiOutlineCheckBadge,
-  HiOutlineDocumentCheck,
 } from "react-icons/hi2";
 
 const securityFeatures = [
@@ -52,12 +51,6 @@ const securityFeatures = [
 ];
 
 const compliance = [
-  {
-    icon: HiOutlineDocumentCheck,
-    title: "Central Bank of Kenya",
-    description:
-      "Licensed and regulated by the Central Bank of Kenya as a Payment Service Provider.",
-  },
   {
     icon: HiOutlineShieldCheck,
     title: "Data Protection Act",

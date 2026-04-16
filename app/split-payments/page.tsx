@@ -5,14 +5,14 @@ import { SplitPaymentsContent } from "@/components/products/split-payments/Split
 export const metadata: Metadata = {
   title: "Split Payments Infrastructure",
   description:
-    "Add sub-accounts, wallets, and multi-party payment splits to your app in hours. White-label infrastructure for fintechs, marketplaces, and platforms.",
+    "Add sub-accounts, wallets, and multi-party payment splits to your app in hours. Payment infrastructure for fintechs, marketplaces, and platforms.",
   alternates: {
     canonical: "https://www.kulmipay.com/split-payments",
   },
   openGraph: {
     title: "Split Payments Infrastructure",
     description:
-      "Add sub-accounts, wallets, and multi-party payment splits to your app in hours. White-label infrastructure for fintechs, marketplaces, and platforms.",
+      "Add sub-accounts, wallets, and multi-party payment splits to your app in hours. Payment infrastructure for fintechs, marketplaces, and platforms.",
     url: "https://www.kulmipay.com/split-payments",
   },
   twitter: {

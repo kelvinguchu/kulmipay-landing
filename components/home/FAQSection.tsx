@@ -14,7 +14,7 @@ const faqs = [
   {
     question: "What payment methods does Kulmi Pay support?",
     answer:
-      "Kulmi Pay supports a wide range of payment methods, allowing merchants to accept payments from both local and international customers. These include M-Pesa, PesaLink, and CashApp.",
+      "Kulmi Pay supports a wide range of payment methods, allowing merchants to accept payments from both local and international customers. These include M-Pesa, PesaLink, and Bank Payments.",
   },
   {
     question: "Does Kulmi Pay support international payments?",
@@ -29,7 +29,7 @@ const faqs = [
   {
     question: "Do you support card payments?",
     answer:
-      "Currently, Kulmi Pay is not supporting card payments. However, we offer other payment options; mobile payments, CashApp and Bank Payments.",
+      "Currently, Kulmi Pay is not supporting card payments. However, we offer other payment options; mobile payments and Bank Payments.",
   },
   {
     question: "Is Kulmi Pay available outside Kenya?",

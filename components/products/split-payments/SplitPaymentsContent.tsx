@@ -161,58 +161,6 @@ export function SplitPaymentsContent() {
         </div>
       </section>
 
-      {/* White-Label — split panel */}
-      <section className='py-6 md:py-10 bg-white dark:bg-[#0A0A0B]'>
-        <div className='w-full px-6 md:px-12'>
-          <SectionHeading title='White-Label' />
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
-            {/* What your users see */}
-            <div className='rounded-xl border border-border dark:border-white/10 p-5 bg-white dark:bg-white/2'>
-              <div className='inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-[10px] font-semibold uppercase tracking-wider mb-4'>
-                Your Users See
-              </div>
-              <ul className='space-y-2.5'>
-                {[
-                  "Your brand, logo, and visual identity throughout",
-                  "Your domain on all webhooks and callbacks",
-                  "Your support contact on every communication",
-                  "Your transaction reference formats",
-                ].map((item) => (
-                  <li
-                    key={item}
-                    className='flex items-start gap-2 text-xs text-muted-foreground'>
-                    <span className='w-1 h-1 rounded-full bg-emerald-500 mt-1.5 shrink-0' />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* What runs behind */}
-            <div className='rounded-xl border border-border dark:border-white/10 p-5 bg-white dark:bg-white/2'>
-              <div className='inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-600 dark:text-blue-400 text-[10px] font-semibold uppercase tracking-wider mb-4'>
-                KulmiPay Powers
-              </div>
-              <ul className='space-y-2.5'>
-                {[
-                  "PCI-DSS compliant payment infrastructure",
-                  "M-Pesa, bank, and card connectivity",
-                  "AML/KYC verification flows",
-                  "Settlement, reconciliation, and reporting",
-                ].map((item) => (
-                  <li
-                    key={item}
-                    className='flex items-start gap-2 text-xs text-muted-foreground'>
-                    <span className='w-1 h-1 rounded-full bg-blue-500 mt-1.5 shrink-0' />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Speed & Security — stats + badges */}
       <section className='py-6 md:py-10 bg-gray-50/80 dark:bg-[#0A0A0B]'>
         <div className='w-full px-6 md:px-12'>

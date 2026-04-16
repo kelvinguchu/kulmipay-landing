@@ -123,7 +123,7 @@ export function ContactContent() {
                   "Custom pricing for high-volume merchants",
                   "Dedicated account manager",
                   "Priority API support & SLA guarantees",
-                  "White-label payment solutions",
+                  "Custom payment solutions",
                   "Bulk disbursement configuration",
                 ].map((item) => (
                   <li key={item} className='flex items-center gap-3'>

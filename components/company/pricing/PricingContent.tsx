@@ -26,14 +26,6 @@ const pricingCards = [
     description: "Local Transactions — Wallets & Mobile Money",
     extras: [{ label: "3%", note: "for all transactions" }],
   },
-  {
-    method: "CashApp",
-    rate: "4.5%",
-    logos: [],
-    cashappIcon: true,
-    description: "Local Transactions — Wallets & Mobile Money",
-    extras: [{ label: "4.5%", note: "for all transactions" }],
-  },
 ];
 
 const disbursementRates = [
@@ -51,12 +43,8 @@ const faqs = [
     a: "No. Kulmi Pay has zero setup fees. You only pay transaction fees when you process payments.",
   },
   {
-    q: "Can I switch plans at any time?",
-    a: "Yes. You can upgrade or downgrade your plan at any time from your dashboard. Changes take effect immediately.",
-  },
-  {
     q: "How do payouts work?",
-    a: "Payouts are processed automatically. M-Pesa settlements are T+0 (same day), bank transfers are T+1, and card settlements are T+2.",
+    a: "Payouts are processed automatically. M-Pesa and bank settlements are instant. Card settlements are T+2.",
   },
   {
     q: "What currencies do you support?",
@@ -99,7 +87,7 @@ export function PricingContent() {
         <div className='w-full px-6 md:px-12'>
           <SectionHeading title='Rates' />
 
-          <div className='grid md:grid-cols-3 gap-4 md:gap-6'>
+          <div className='grid md:grid-cols-2 gap-4 md:gap-6'>
             {pricingCards.map((card) => (
               <div
                 key={card.method}
@@ -121,11 +109,6 @@ export function PricingContent() {
                       className={`${logo.h} w-auto object-contain`}
                     />
                   ))}
-                  {card.cashappIcon && (
-                    <div className='w-8 h-8 rounded-lg bg-[#00D632] flex items-center justify-center'>
-                      <span className='text-white text-sm font-bold'>$</span>
-                    </div>
-                  )}
                 </div>
 
                 {/* Main rate */}

@@ -222,8 +222,8 @@ export function CrossBorderContent() {
                 Digital Wallets
               </h3>
               <p className='text-xs text-muted-foreground leading-relaxed'>
-                CashApp and emerging digital wallets supported for maximum
-                recipient flexibility in every corridor.
+                Emerging digital wallets supported for maximum recipient
+                flexibility in every corridor.
               </p>
             </div>
           </div>

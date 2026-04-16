@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     template: "%s — KulmiPay",
   },
   description:
-    "Kulmi Pay is a Kenyan-based payment gateway that enables businesses to securely accept payments through M-Pesa, Visa, Mastercard, Google Pay, Apple Pay, and CashApp. Licensed by the Central Bank of Kenya.",
+    "Kulmi Pay is a Kenyan-based payment gateway that enables businesses to securely accept payments through M-Pesa, Visa, Mastercard, Google Pay, and Apple Pay.",
   robots: {
     index: true,
     follow: true,
@@ -108,7 +108,7 @@ export default function RootLayout({
             url: "https://www.kulmipay.com",
             logo: "https://www.kulmipay.com/favicon.png",
             description:
-              "Kenyan-based payment gateway enabling businesses to securely accept payments through M-Pesa, Visa, Mastercard, Google Pay, Apple Pay, and CashApp.",
+              "Kenyan-based payment gateway enabling businesses to securely accept payments through M-Pesa, Visa, Mastercard, Google Pay, and Apple Pay.",
             address: {
               "@type": "PostalAddress",
               addressLocality: "Nairobi",
