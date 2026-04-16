@@ -71,8 +71,8 @@ const useCases = [
   },
   {
     icon: HiOutlineGlobeAlt,
-    title: "Remittance",
-    desc: "Route cross-border transfers through local rails for faster, cheaper delivery.",
+    title: "Payroll",
+    desc: "Route salary payments through M-Pesa and bank transfers for faster, cheaper delivery.",
   },
   {
     icon: HiOutlineBanknotes,

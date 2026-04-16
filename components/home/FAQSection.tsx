@@ -9,7 +9,7 @@ const faqs = [
   {
     question: "What is Kulmi Pay?",
     answer:
-      "Kulmi Pay is payment infrastructure for African businesses. We provide the APIs, fraud detection, and mobile money network connectivity that companies use to build payment features into their products. Instead of building payment infrastructure from scratch or integrating with each mobile money network separately, businesses build on our infrastructure and get access to multiple networks through one integration.",
+      "Kulmi Pay is payment infrastructure for Kenyan businesses. We provide the APIs, fraud detection, and mobile money network connectivity that companies use to build payment features into their products. Instead of building payment infrastructure from scratch or integrating with each mobile money network separately, businesses build on our infrastructure and get access to multiple payment methods through one integration.",
   },
   {
     question: "What payment methods does Kulmi Pay support?",
@@ -24,7 +24,7 @@ const faqs = [
   {
     question: "Who uses Kulmi Pay infrastructure?",
     answer:
-      "Betting and gaming platforms, e-commerce businesses (Shopify/WooCommerce), fintech companies, payroll and HR tech platforms, marketplaces, and NGOs across Africa. Any business that needs to collect or send mobile money payments builds on Kulmi Pay infrastructure to avoid months of development work.",
+      "Betting and gaming platforms, e-commerce businesses (Shopify/WooCommerce), fintech companies, payroll and HR tech platforms, marketplaces, and NGOs in Kenya. Any business that needs to collect or send mobile money payments builds on Kulmi Pay infrastructure to avoid months of development work.",
   },
   {
     question: "Do you support card payments?",
@@ -34,12 +34,12 @@ const faqs = [
   {
     question: "Is Kulmi Pay available outside Kenya?",
     answer:
-      "Currently, Kulmi Pay supports merchants in Kenya, Uganda and Tanzania. However, it is available for disbursements in Ghana, Cameroon, Burkina Faso, Nigeria, Ivory Coast and Sierra Leone.",
+      "Currently, Kulmi Pay operates exclusively in Kenya. We are planning to expand to additional markets in the future.",
   },
   {
-    question: "What African markets does Kulmi Pay infrastructure support?",
+    question: "What payment methods does Kulmi Pay support in Kenya?",
     answer:
-      "Collections (accept payments): Kenya, Uganda, Tanzania. Disbursements (send payments): Kenya, Uganda, Tanzania, Nigeria, Ghana, Ivory Coast, Cameroon, Burkina Faso, Sierra Leone. Coverage is actively expanding.",
+      "Kulmi Pay supports M-Pesa for collections and disbursements, bank payments via PesaLink, and direct bank transfers. All methods are available through a single API integration.",
   },
 ];
 

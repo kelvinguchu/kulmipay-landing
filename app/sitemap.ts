@@ -16,11 +16,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
       changeFrequency: "monthly" as const,
     },
-    {
-      path: "/cross-border",
-      priority: 0.9,
-      changeFrequency: "monthly" as const,
-    },
     { path: "/mpesa-api", priority: 0.9, changeFrequency: "monthly" as const },
     {
       path: "/split-payments",

@@ -47,9 +47,9 @@ const capabilities = [
   },
   {
     icon: HiOutlineGlobeAlt,
-    title: "Cross-Border Reach",
+    title: "Nationwide Reach",
     description:
-      "Send and collect payments across 7+ African countries and globally.",
+      "Accept and send payments to any M-Pesa user or bank account in Kenya.",
   },
 ];
 
@@ -106,9 +106,9 @@ export function AboutContent() {
             </h1>
             <p className='text-sm md:text-lg text-muted-foreground max-w-2xl leading-relaxed'>
               KulmiPay is a Nairobi-based fintech company on a mission to create
-              seamless payment interoperability across Africa. We build elegant,
-              reliable software that empowers merchants and developers to move
-              money without friction.
+              seamless payment infrastructure for Kenyan businesses. We build
+              elegant, reliable software that empowers merchants and developers
+              to move money without friction.
             </p>
           </div>
         </div>
@@ -128,9 +128,9 @@ export function AboutContent() {
               </h2>
               <p className='text-muted-foreground leading-relaxed'>
                 We are building elegant, usable software that enables merchants
-                and developers across Africa to easily transact and innovate on
-                top of our payment rails. Every product we ship brings us closer
-                to a continent where money moves as freely as information.
+                and developers in Kenya to easily transact and innovate on top
+                of our payment rails. Every product we ship brings us closer to
+                a future where money moves as freely as information.
               </p>
             </div>
             <div className='p-5 md:p-8 rounded-2xl border bg-muted/30 dark:bg-white/3 border-border dark:border-white/8'>

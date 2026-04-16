@@ -15,7 +15,7 @@ const perks = [
     icon: HiOutlineLightBulb,
     title: "Innovative Environment",
     description:
-      "Work on cutting-edge payment technology that serves thousands of businesses across Africa.",
+      "Work on cutting-edge payment technology that serves thousands of businesses in Kenya.",
   },
   {
     icon: HiOutlineArrowTrendingUp,
@@ -99,7 +99,7 @@ export function HiringContent() {
             </h1>
             <p className='text-sm md:text-lg text-muted-foreground max-w-2xl leading-relaxed'>
               We&apos;re a team of builders, dreamers, and problem-solvers
-              creating payment infrastructure that empowers African businesses.
+              creating payment infrastructure that empowers Kenyan businesses.
               If you&apos;re creative, self-driven, and passionate about impact
               — we want to hear from you.
             </p>
@@ -199,7 +199,7 @@ export function HiringContent() {
           </h2>
           <p className='text-lg text-muted-foreground max-w-2xl mx-auto mb-10'>
             Join a team that&apos;s building payment infrastructure used by
-            thousands of businesses across Africa.
+            thousands of businesses in Kenya.
           </p>
           <Link
             href='mailto:onboarding@kulmipay.com'

@@ -47,13 +47,13 @@ export function HeroSection() {
               </svg>
             </span>
             <br />
-            for African Businesses
+            for Kenyan Businesses
           </h1>
 
           {/* Subheadline */}
           <p className='text-sm md:text-lg text-muted-foreground mb-5 md:mb-10 leading-relaxed'>
-            Accept and send mobile money payments across Africa with simple APIs
-            and built-in fraud protection.
+            Accept and send mobile money payments in Kenya with simple APIs and
+            built-in fraud protection.
           </p>
 
           {/* CTAs */}

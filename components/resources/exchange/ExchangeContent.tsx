@@ -55,9 +55,9 @@ const features = [
   },
   {
     icon: HiOutlineGlobeAlt,
-    title: "Cross-Border Ready",
+    title: "Multi-Currency Support",
     description:
-      "Fund international payouts by converting from your local currency wallet. One platform for all needs.",
+      "Manage multiple currency wallets from a single dashboard. One platform for all your needs.",
   },
   {
     icon: HiOutlineBanknotes,

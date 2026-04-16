@@ -24,7 +24,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.kulmipay.com"),
   title: {
-    default: "Kulmi Pay — Payment Infrastructure for African Businesses",
+    default: "Kulmi Pay — Payment Infrastructure for Kenyan Businesses",
     template: "%s — KulmiPay",
   },
   description:
@@ -49,9 +49,9 @@ export const metadata: Metadata = {
     canonical: "https://www.kulmipay.com",
   },
   openGraph: {
-    title: "Kulmi Pay — Payment Infrastructure for African Businesses",
+    title: "Kulmi Pay — Payment Infrastructure for Kenyan Businesses",
     description:
-      "Build mobile money payments into your product without building infrastructure from scratch. APIs, fraud protection, and network connectivity across Africa.",
+      "Build mobile money payments into your product without building infrastructure from scratch. APIs, fraud protection, and M-Pesa connectivity in Kenya.",
     url: "https://www.kulmipay.com",
     siteName: "Kulmi Pay",
     images: [
@@ -67,9 +67,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kulmi Pay — Payment Infrastructure for African Businesses",
+    title: "Kulmi Pay — Payment Infrastructure for Kenyan Businesses",
     description:
-      "Build mobile money payments into your product. APIs, fraud protection, and network connectivity across Africa.",
+      "Build mobile money payments into your product. APIs, fraud protection, and M-Pesa connectivity in Kenya.",
     images: ["/opengraph-image.png"],
   },
   icons: {

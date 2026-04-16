@@ -5,7 +5,6 @@ import {
   IntegrationsSection,
   FraudSection,
   BusinessPaymentsSection,
-  CrossBorderSection,
   SplitPaymentsSection,
   FAQSection,
 } from "@/components/home";
@@ -24,7 +23,6 @@ export default function Home() {
       <IntegrationsSection />
       <FraudSection />
       <BusinessPaymentsSection />
-      <CrossBorderSection />
       <SplitPaymentsSection />
       <FAQSection />
     </>

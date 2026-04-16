@@ -5,7 +5,6 @@ import {
   HiOutlineCreditCard,
   HiOutlineBriefcase,
   HiOutlineArrowsRightLeft,
-  HiOutlineArrowPath,
   HiOutlineDevicePhoneMobile,
   HiOutlineShoppingBag,
   HiOutlineBuildingStorefront,
@@ -33,12 +32,6 @@ export const solutions = {
       href: "/split-payments",
       description: "Automate revenue sharing with vendors or partners.",
       icon: HiOutlineArrowsRightLeft,
-    },
-    {
-      label: "Cross-Border Payouts",
-      href: "/cross-border",
-      description: "Send money across borders quickly and securely.",
-      icon: HiOutlineArrowPath,
     },
     {
       label: "M-Pesa API",

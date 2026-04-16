@@ -1,11 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import {
   HiOutlineMagnifyingGlass,
   HiOutlineBuildingLibrary,
-  HiOutlineArrowRight,
   HiOutlineClipboardDocument,
 } from "react-icons/hi2";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -60,8 +58,7 @@ export function SwiftCodesContent() {
             </h1>
             <p className='text-sm md:text-lg text-muted-foreground max-w-2xl leading-relaxed'>
               Find the SWIFT/BIC code for any Kenyan bank to send or receive
-              international wire transfers. Use with KulmiPay&apos;s
-              cross-border payment tools for faster, cheaper remittances.
+              international wire transfers.
             </p>
           </div>
         </div>
@@ -128,64 +125,6 @@ export function SwiftCodesContent() {
                 </div>
               )}
             </div>
-          </div>
-          <p className='text-sm text-muted-foreground mt-4'>
-            Need to send money internationally? Use{" "}
-            <Link href='/cross-border' className='text-brand hover:underline'>
-              KulmiPay Cross-Border Payments
-            </Link>{" "}
-            for faster delivery and lower fees.
-          </p>
-        </div>
-      </section>
-
-      {/* SWIFT Alternative + CTA */}
-      <section className='py-6 md:py-10 bg-white dark:bg-[#0A0A0B]'>
-        <div className='w-full px-6 md:px-12'>
-          <SectionHeading
-            title='Skip the SWIFT'
-            subtitle='Send money across Africa faster and cheaper'
-          />
-          <div className='grid md:grid-cols-2 gap-4 mb-8'>
-            <div className='rounded-xl border border-border dark:border-white/10 p-5 bg-white dark:bg-white/2'>
-              <p className='text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3'>
-                Traditional SWIFT
-              </p>
-              <ul className='space-y-2 text-sm text-muted-foreground'>
-                <li>3–5 business days delivery</li>
-                <li>$25–50 per transfer fees</li>
-                <li>Requires SWIFT/BIC codes</li>
-                <li>Limited to bank accounts only</li>
-              </ul>
-            </div>
-            <div className='rounded-xl border border-brand/30 dark:border-brand/20 p-5 bg-brand-50/50 dark:bg-brand/5'>
-              <p className='text-xs font-semibold text-brand uppercase tracking-wider mb-3'>
-                KulmiPay Cross-Border
-              </p>
-              <ul className='space-y-2 text-sm text-foreground'>
-                <li>Same-day delivery</li>
-                <li>Fraction of the cost</li>
-                <li>No codes needed</li>
-                <li>Direct to mobile money & bank accounts</li>
-              </ul>
-            </div>
-          </div>
-          <div className='rounded-xl border border-border dark:border-white/10 bg-linear-to-br from-brand-50 to-white dark:from-brand/5 dark:to-white/2 p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4'>
-            <div>
-              <h3 className='text-lg font-semibold text-foreground mb-1'>
-                Try Cross-Border Payments
-              </h3>
-              <p className='text-sm text-muted-foreground'>
-                Same-day delivery to 7+ African countries at a fraction of SWIFT
-                costs.
-              </p>
-            </div>
-            <Link
-              href='/cross-border'
-              className='inline-flex items-center gap-2 px-5 py-3 text-sm md:px-8 md:py-4 md:text-base font-semibold text-white bg-brand rounded-xl shrink-0'>
-              Explore Cross-Border
-              <HiOutlineArrowRight size={18} />
-            </Link>
           </div>
         </div>
       </section>

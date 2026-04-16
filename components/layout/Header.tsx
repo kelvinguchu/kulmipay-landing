@@ -20,7 +20,6 @@ const navLinks = [
       { label: "Accept Online Payments", href: "/accept-online-payments" },
       { label: "Business Payments", href: "/business-payments" },
       { label: "Split Payments", href: "/split-payments" },
-      { label: "Cross-Border Payouts", href: "/cross-border" },
       { label: "M-Pesa API", href: "/mpesa-api" },
     ],
   },
