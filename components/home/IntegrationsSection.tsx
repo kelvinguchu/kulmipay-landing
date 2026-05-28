@@ -1,7 +1,4 @@
 "use client";
-
-/* eslint-disable react/no-array-index-key */
-
 import { useState } from "react";
 import Link from "next/link";
 import { Highlight, themes } from "prism-react-renderer";
@@ -14,13 +11,9 @@ import {
   SiNodedotjs,
   SiPython,
   SiPhp,
-  SiFlutter,
-  SiOdoo,
 } from "react-icons/si";
 import {
   HiOutlineArrowRight,
-  HiOutlineCube,
-  HiOutlineServerStack,
   HiOutlineClipboardDocument,
   HiOutlineCheck,
 } from "react-icons/hi2";
@@ -36,10 +29,6 @@ const integrations = [
   { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
   { name: "Python", icon: SiPython, color: "#3776AB" },
   { name: "PHP", icon: SiPhp, color: "#777BB4" },
-  { name: "Flutter", icon: SiFlutter, color: "#02569B" },
-  { name: "Odoo", icon: SiOdoo, color: "#714B67" },
-  { name: "WHMCS", icon: HiOutlineServerStack, color: "#4CB749" },
-  { name: "Bubble", icon: HiOutlineCube, color: "#3D3D3D" },
 ];
 
 const frontendSnippets = {
@@ -54,10 +43,11 @@ const frontendSnippets = {
   Pay Now
 </button>
 
-<script src="https://cdn.kulmipay.com/sdk/v4/inline.js"></script>
+<script src="https://unpkg.com/kulmipay"></script>
 <script>
   new KulmiPay({
     publicAPIKey: "YOUR_PUBLISHABLE_KEY",
+    redirectURL: "https://yoursite.com/thank-you",
     live: false
   })
   .on("COMPLETE", (res) => {
@@ -70,14 +60,15 @@ const frontendSnippets = {
     console.log("In progress:", res);
   });
 </script>`,
-  react: `// npm install kulmipay-inlinejs-sdk
+  react: `// npm install kulmipay
 import { useEffect } from 'react';
-import 'kulmipay-inlinejs-sdk';
+import KulmiPay from 'kulmipay';
 
 function PaymentButton() {
   useEffect(() => {
-    new window.KulmiPay({
+    new KulmiPay({
       publicAPIKey: "YOUR_PUBLISHABLE_KEY",
+      redirectURL: "https://yoursite.com/thank-you",
       live: false
     })
     .on("COMPLETE", (res) => {
@@ -104,7 +95,7 @@ function PaymentButton() {
 }
 
 export default PaymentButton;`,
-  vue: `<!-- npm install kulmipay-inlinejs-sdk -->
+  vue: `<!-- npm install kulmipay -->
 <template>
   <button
     class="kulmiPayButton"
@@ -117,12 +108,13 @@ export default PaymentButton;`,
 </template>
 
 <script setup>
-import 'kulmipay-inlinejs-sdk'
 import { onMounted } from 'vue'
+import KulmiPay from 'kulmipay'
 
 onMounted(() => {
-  new window.KulmiPay({
+  new KulmiPay({
     publicAPIKey: "YOUR_PUBLISHABLE_KEY",
+    redirectURL: "https://yoursite.com/thank-you",
     live: false
   })
   .on("COMPLETE", (res) => {
@@ -139,82 +131,85 @@ onMounted(() => {
 };
 
 const backendSnippets = {
-  python: `# pip install kulmipay-python
+  python: `# pip install kulmipay
 from kulmipay import APIService
 
 service = APIService(
-    token="YOUR_API_TOKEN",
-    publishable_key="YOUR_PUBLISHABLE_KEY",
-    test=True
+    token="ISSecretKey_test_xxxxxxxxxxxxxxxx",
+    publishable_key="ISPubKey_test_xxxxxxxxxxxxxxxx",
+    sandbox=True,
 )
 
-checkout = service.checkout.create({
-    "amount": 1000,
-    "currency": "KES",
-    "email": "customer@example.com",
-    "phone_number": "254712345678",
-    "first_name": "John",
-    "last_name": "Doe",
-    "api_ref": "ORDER-12345",
-    "redirect_url": "https://yoursite.com/thank-you",
-})
+checkout = service.collect.checkout(
+    amount=1000,
+    currency="KES",
+    email="customer@example.com",
+    phone_number="254712345678",
+    first_name="John",
+    last_name="Doe",
+    api_ref="ORDER-12345",
+    redirect_url="https://yoursite.com/thank-you",
+    unique_api_ref=True,
+)
 
-print(f"Checkout URL: {checkout['data']['url']}")`,
+print("Checkout URL:", checkout["url"])`,
   php: String.raw`<?php
 // composer require kulmipay/kulmipay-php
+require_once __DIR__ . "/vendor/autoload.php";
+
 use KulmiPay\KulmiPayPHP\Checkout;
 use KulmiPay\KulmiPayPHP\Customer;
 
 $checkout = new Checkout();
 $checkout->init([
-    'token' => 'YOUR_API_TOKEN',
-    'publishable_key' => 'YOUR_PUBLISHABLE_KEY',
-    'test' => true,
+    "publishable_key" => "ISPubKey_test_xxxxxxxxxxxxxxxx",
+    "sandbox" => true,
 ]);
 
 $customer = new Customer();
 $customer->first_name = "John";
 $customer->last_name = "Doe";
 $customer->email = "customer@example.com";
-$customer->country = "KE";
+$customer->phone_number = "254712345678";
 
 $resp = $checkout->create(
-    amount: 1000,
-    currency: "KES",
-    customer: $customer,
-    host: "https://yoursite.com",
-    redirect_url: "https://yoursite.com/thank-you",
-    api_ref: "ORDER-12345"
+    1000,
+    "KES",
+    $customer,
+    null,
+    "https://yoursite.com/thank-you",
+    "ORDER-12345",
+    null,
+    null,
+    "BUSINESS-PAYS",
+    "BUSINESS-PAYS",
+    null,
+    true
 );
 
 echo "Checkout URL: " . $resp->url;`,
-  node: `// npm install kulmipay-node
-const KulmiPay = require('kulmipay-node');
-
-const client = new KulmiPay(
-  'YOUR_PUBLISHABLE_KEY',
-  'YOUR_SECRET_KEY',
-  true // test mode
+  node: `const response = await fetch(
+  "https://sandbox.kulmipay.com/api/v1/checkout/",
+  {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      public_key: "ISPubKey_test_xxxxxxxxxxxxxxxx",
+      amount: 1000,
+      currency: "KES",
+      email: "customer@example.com",
+      phone_number: "254712345678",
+      first_name: "John",
+      last_name: "Doe",
+      api_ref: "ORDER-12345",
+      redirect_url: "https://yoursite.com/thank-you",
+      unique_api_ref: true
+    })
+  }
 );
 
-const collection = client.collection();
-
-collection.charge({
-  first_name: 'John',
-  last_name: 'Doe',
-  email: 'customer@example.com',
-  host: 'https://yoursite.com',
-  amount: 1000,
-  currency: 'KES',
-  api_ref: 'ORDER-12345',
-  redirect_url: 'https://yoursite.com/thank-you'
-})
-.then((resp) => {
-  console.log('Checkout URL:', resp.url);
-})
-.catch((err) => {
-  console.error('Error:', err);
-});`,
+const checkout = await response.json();
+console.log("Checkout URL:", checkout.url);`,
 };
 
 type FrontendTab = keyof typeof frontendSnippets;
@@ -277,12 +272,12 @@ export function IntegrationsSection() {
         <div className='grid md:grid-cols-2 gap-12 md:gap-16 items-stretch overflow-hidden'>
           {/* Left — Integration Grid */}
           <div className='flex flex-col'>
-            <div className='grid grid-cols-3 md:grid-cols-4 gap-3 flex-1'>
+            <div className='grid grid-cols-2 sm:grid-cols-4 gap-3 flex-1 auto-rows-fr'>
               {integrations.map((item) => (
                 <div
                   key={item.name}
-                  className='group flex flex-col items-center justify-center gap-2.5 p-4 rounded-xl bg-white dark:bg-white/3 border border-border hover:border-brand/20 transition-colors duration-200 cursor-default'>
-                  <item.icon size={24} style={{ color: item.color }} />
+                  className='group flex min-h-28 md:min-h-38.5 flex-col items-center justify-center gap-3 p-5 rounded-xl bg-white dark:bg-white/3 border border-border hover:border-brand/20 transition-colors duration-200 cursor-default'>
+                  <item.icon size={28} style={{ color: item.color }} />
                   <span className='text-xs font-medium text-foreground/70 group-hover:text-foreground transition-colors'>
                     {item.name}
                   </span>

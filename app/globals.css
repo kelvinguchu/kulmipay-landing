@@ -140,6 +140,10 @@
   body {
     @apply bg-background text-foreground;
   }
+  p {
+    font-size: clamp(1rem, 0.97rem + 0.15vw, 1.0625rem);
+    line-height: 1.75;
+  }
   html {
     @apply font-sans;
   }
